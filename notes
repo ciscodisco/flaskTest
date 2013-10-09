@@ -1,0 +1,9 @@
+git clone https://github.com/mjhea0/flask-boilerplate.git
+cd flask-boilerplate/
+virtualenv --no-site-packages env
+source env/bin/activate
+pip install -r requirements.txt
+python app.py
+heroku login
+pip freeze > requirements.txt
+echo "web: python run.py" > Procfile
